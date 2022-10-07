@@ -4,7 +4,7 @@ A simple discord application that will generate a random grid of emoji's replica
 
 # Explanation 🧠
 It's super simple and it just takes the SHA256 hash of the user's inputed gameid, converts that hash into a base10 number
-```
+```py
 >> hash = str(int(hashlib.sha256(gameid.encode('utf-8')).hexdigest(), 16))[1:]
 ```
 then
