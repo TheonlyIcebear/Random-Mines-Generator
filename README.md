@@ -7,7 +7,7 @@ It's super simple and it just takes the SHA256 hash of the user's inputed gameid
 ```py
 >> hash = str(int(hashlib.sha256(gameid.encode('utf-8')).hexdigest(), 16))[1:]
 ```
-then it loops through the hash variable 2 characters at a time using that 2 digit number and using number % length_of_choiches prevents the number from being larger than the list
+then it loops through the hash variable 2 characters at a time using that 2 digit number and using `number % length_of_choiches` prevents the number from being larger than the list
 ```py
 for x in range(0, int(mines)*2, 2):
         print(x, x+2)
