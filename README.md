@@ -7,4 +7,4 @@ It's super simple and it just takes the SHA256 hash of the user's inputed gameid
 ```py
 >> hash = str(int(hashlib.sha256(gameid.encode('utf-8')).hexdigest(), 16))[1:]
 ```
-then
+then it loops through the hash variable 2 characters at a time using that 2 digit number as the seed for the random selection in the list to determine which item is selected, then it removes that number from the list to prevent it from being picked twice or more
