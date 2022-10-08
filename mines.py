@@ -1,4 +1,4 @@
-import RobloxApi, hashlib, requests, discord, hashlib, random, json, os
+import hashlib, discord, hashlib
 from discord.ext.commands import has_permissions, CheckFailure
 from discord.ext import commands
 from discord.utils import get
