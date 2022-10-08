@@ -29,8 +29,7 @@ async def mines(ctx, gameid, mines=3):
         else:
             n = int(hash[x-2 : x])
 
-        random.seed(n)
-        n = random.choice(choices)
+        n = n % len(choices)
         choices.remove(n)
 
 
