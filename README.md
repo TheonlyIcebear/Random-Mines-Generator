@@ -7,7 +7,7 @@ It's super simple and it just takes the SHA256 hash of the user's inputed gameid
 ```py
 >> hash = str(int(hashlib.sha256(gameid.encode('utf-8')).hexdigest(), 16))[1:]
 ```
-then it loops through the hash variable 2 characters at a time using that 2 digit number as the seed for the random selection in the list to determine which item is selected, then it removes that number from the list to prevent it from being picked twice or more
+then it loops through the hash variable 2 characters at a time using that 2 digit number and using number % length_of_choiches prevents the number from being larger than the list
 ```py
 for x in range(0, int(mines)*2, 2):
         print(x, x+2)
@@ -16,13 +16,15 @@ for x in range(0, int(mines)*2, 2):
         else:
             n = int(hash[x-2 : x])
 
-        random.seed(n)
-        n = random.choice(choices)
+        n = n % len(choices)
         choices.remove(n)
-
 
         t = [* msg[n // 5]]
         t[n % 5] = "✅"
         msg[n // 5] = ''.join(t)
+
+    msg = '\n'.join(msg)
 ```
 This is pretty unnessecary though and you could just use the the gameid as the seed for the random item selection
+
+Also pretty important to memntion I wanted the result to be the same and I was intending
