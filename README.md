@@ -16,14 +16,19 @@ for x in range(0, int(mines)*2, 2):
         else:
             n = int(hash[x-2 : x])
 
-        n = n % len(choices)
+        n = choices[n % len(choices)]
         choices.remove(n)
+
+
+        print(n, n // 5, n % 5)
 
         t = [* msg[n // 5]]
         t[n % 5] = "✅"
         msg[n // 5] = ''.join(t)
+        print(msg)
 
     msg = '\n'.join(msg)
+
 ```
 
 This method of generation also ensures you get a random random result that still will give the same result if the same arguements are provided
