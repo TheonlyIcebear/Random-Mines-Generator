@@ -25,3 +25,4 @@ for x in range(0, int(mines)*2, 2):
         t[n % 5] = "✅"
         msg[n // 5] = ''.join(t)
 ```
+This is pretty unnessecary though and you could just use the the gameid as the seed for the random item selection
