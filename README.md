@@ -25,6 +25,5 @@ for x in range(0, int(mines)*2, 2):
 
     msg = '\n'.join(msg)
 ```
-This is pretty unnessecary though and you could just use the the gameid as the seed for the random item selection
 
-Also pretty important to memntion I wanted the result to be the same and I was intending
+This method of generation also ensures you get a random random result that still will give the same result if the same arguements are provided
